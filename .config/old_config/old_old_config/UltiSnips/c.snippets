@@ -1,0 +1,94 @@
+snippet init "initialize a regular PRO1 file"
+#include <iostream>
+using namespace std;
+
+int main() {
+	$0
+}
+endsnippet
+
+snippet cin "get input"
+cin >> $1;
+endsnippet
+
+snippet cout "print output w/endl"
+cout << $1 << endl;
+endsnippet
+
+snippet coutl "print output w/o endl"
+cout << $1;
+endsnippet
+
+snippet for "for loop"
+for (int $1 = ${2:0}; $3; ${4:++}$1) {
+	$0
+}
+endsnippet
+
+snippet infor "inline for loop"
+for (int $1 = ${2:0}; $3; ${4:++}$1) $0
+endsnippet
+
+snippet while "while loop"
+while ($1) {
+	$0
+}
+endsnippet
+
+snippet if "if statement" wA
+if ($1) $0
+endsnippet
+
+snippet endli "end line" wA
+cout << endl;
+endsnippet
+
+snippet vec "vector"
+vector <$1> $2($3);
+$0
+endsnippet
+
+snippet vecn "vector v(n)" wA
+vector <$1> v(n);
+$0
+endsnippet
+
+snippet initm "initialize w/matrices"
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef vector<int> Row;
+typedef vector<Row> Matrix;
+
+int main() {
+	$0
+}
+endsnippet
+
+snippet initv "initialize w/vectors"
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+	$0
+}
+endsnippet
+
+snippet whilcin "while w/cin"
+while (cin >> ${1:n}) {
+	$0
+}
+endsnippet
+
+snippet doxyf "document doxyfile for function"
+/** @brief $1
+  * \pre ${2:<em>cierto</em>}
+  * \post $3
+  */
+endsnippet
+
+snippet couts "cout with a space"
+cout << $1 << ' ';$0
+endsnippet
