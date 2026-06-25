@@ -1,12 +1,17 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/home/elahi/.local/bin
-export PATH=$PATH:/opt/nvim-linux64/bin
+export PATH=$PATH:/opt/nvim-linux-x86_64/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 export EDITOR="nvim"
+
+export VCPKG_ROOT="/home/elahi/bin/vcpkg"
+export PATH=$PATH:$VCPKG_ROOT
+export PATH=$PATH:/home/elahi/bin/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -118,9 +123,11 @@ alias ezsh="vim ~/.zshrc"
 alias szsh="source ~/.zshrc"
 alias vim="nvim"
 alias fixsort="isort $HOME/projectes/signair-core-backend/src --check 2>&1 | grep 'ERROR:' | awk '{print $2}' | xargs isort"
+alias copy="xclip -selection clipboard"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=$PATH:$(go env GOPATH)/bin
